@@ -76,6 +76,6 @@ class Pravecek_2025_Model(LeafSystem):
     def CalcModelResponse(self, context, output):
 
         q = context.get_continuous_state_vector().CopyToVector()
-        q[1] = -q[0] + q[1] # theta = phi - theta_g
+        q[1] = -q[0] + q[1] 
         q[3] = -q[2] + q[3]
         output.SetFromVector(q)
