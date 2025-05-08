@@ -56,8 +56,5 @@ python3 run_compare_steer_models.py
  - `compare_models.py` contains a class that wraps the rigid body model from [1]
  - `world_features.py` contains a function to add a plate to the simulation for the robot to roll on
 
- 
-<img src="utilities/repo_structure.png" width=350 height=250>
-
 ## References
 [1] "Empirically Compensated Setpoint Tracking for Spherical Robots With Pressurized Soft-Shells," in IEEE Robotics and Automation Letters, vol. 10, no. 3, pp. 2136-2143, March 2025
