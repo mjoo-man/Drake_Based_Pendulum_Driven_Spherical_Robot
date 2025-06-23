@@ -112,12 +112,12 @@ if __name__=="__main__":
     stiction_params =  [RoboBall2Params().steer_dynamic_friction,
                         RoboBall2Params().steer_static_friction,
                         RoboBall2Params().steer_viscous_damping]
-    majd_stiction_params = [0.204, 0.45, 10, 0.1, 1] # [f_w, f_c, sigma, w_c, n ]
+
     viscous_params = [0,0,RoboBall2Params().steer_viscous_damping]
     print(f"Running Test for stiction")
     times, data = run_test(meshcat, starting_angle, StictionModel, stiction_params)
     print(f"Running Test for  Madj_et_al")
-    times_maj, data_maj =  run_test(meshcat, starting_angle, StictionModel_Majd, majd_stiction_params)
+    times_maj, data_maj =  run_test(meshcat, starting_angle, StictionModel_Majd, RoboBall2Params().majd_friction_params)
     print("Running Test for Viscous Damping")
     times_visc, data_visc = run_test(meshcat, starting_angle, StictionModel, viscous_params)
     print(f"finishing tests, plotting ... ")

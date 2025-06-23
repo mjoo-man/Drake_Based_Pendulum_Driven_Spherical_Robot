@@ -92,7 +92,7 @@ if __name__=="__main__":
     stiction_params =  [RoboBall2Params().steer_static_friction,
                         RoboBall2Params().steer_dynamic_friction,
                         RoboBall2Params().steer_viscous_damping]
-    majd_stiction_params = [0.23, 0.7, 10, 1, 1] # [f_w, f_c, sigma, w_c, n ]
+    majd_stiction_params = RoboBall2Params().majd_friction_params
     viscous_params = [0,0,RoboBall2Params().steer_viscous_damping]
     print(f"Running Test for stiction")
     stiction = StictionModel(stiction_params)
